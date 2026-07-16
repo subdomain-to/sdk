@@ -12,7 +12,7 @@ final class OpenApiContractTest extends TestCase
         self::assertFileExists($file, 'Set SUBDOMAINTO_OPENAPI when running outside the control-plane checkout.');
         preg_match_all('/^\s+operationId:\s*([A-Za-z0-9_]+)\s*$/m', (string) file_get_contents($file), $matches);
         $actual = $matches[1]; sort($actual);
-        $expected = ['createCheckoutSession', 'createDomainZone', 'createHostname', 'createOrigin', 'createProject', 'createWebhookEndpoint', 'createWidgetHostname', 'createWidgetSession', 'deleteHostname', 'getHostname', 'getUsage', 'health', 'listHostnames', 'listProjects'];
+        $expected = ['createCheckoutSession', 'createDestination', 'createDomain', 'createWebhookEndpoint', 'createWidgetDomain', 'createWidgetSession', 'deleteDomain', 'deleteWebhookEndpoint', 'getDomain', 'getUsage', 'health', 'listDestinations', 'listDomains', 'listWebhookDeliveries', 'listWebhookEndpoints', 'retryWebhookDelivery', 'updateWebhookEndpoint'];
         sort($expected);
         self::assertSame($expected, $actual);
     }

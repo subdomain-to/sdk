@@ -15,10 +15,8 @@ use SubdomainTo\Exception\NotFoundException;
 use SubdomainTo\Exception\ServerException;
 use SubdomainTo\Exception\TransportException;
 use SubdomainTo\Resource\BillingResource;
-use SubdomainTo\Resource\DomainZonesResource;
-use SubdomainTo\Resource\HostnamesResource;
-use SubdomainTo\Resource\OriginsResource;
-use SubdomainTo\Resource\ProjectsResource;
+use SubdomainTo\Resource\DestinationsResource;
+use SubdomainTo\Resource\DomainsResource;
 use SubdomainTo\Resource\SystemResource;
 use SubdomainTo\Resource\UsageResource;
 use SubdomainTo\Resource\WebhooksResource;
@@ -46,10 +44,8 @@ final class Client
     }
 
     public function system(): SystemResource { return new SystemResource($this); }
-    public function projects(): ProjectsResource { return new ProjectsResource($this); }
-    public function origins(): OriginsResource { return new OriginsResource($this); }
-    public function domainZones(): DomainZonesResource { return new DomainZonesResource($this); }
-    public function hostnames(): HostnamesResource { return new HostnamesResource($this); }
+    public function destinations(): DestinationsResource { return new DestinationsResource($this); }
+    public function domains(): DomainsResource { return new DomainsResource($this); }
     public function webhooks(): WebhooksResource { return new WebhooksResource($this); }
     public function widget(): WidgetResource { return new WidgetResource($this); }
     public function usage(): UsageResource { return new UsageResource($this); }
