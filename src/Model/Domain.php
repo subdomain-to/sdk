@@ -4,6 +4,7 @@ final class Domain extends Model
 {
     public function id(): string { return $this->string('id'); }
     public function hostname(): string { return $this->string('hostname'); }
+    public function externalCustomerId(): ?string { return $this->nullableString('external_customer_id'); }
     public function type(): string { return $this->string('type'); }
     public function status(): string { return $this->string('status'); }
     public function dnsStatus(): string { return $this->string('dns_status'); }
