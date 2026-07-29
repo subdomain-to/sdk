@@ -1,6 +1,23 @@
 {
     "name": "subdomainto/sdk",
-    "description": "Framework-agnostic PHP client for the subdomain.to API.",
+    "description": "Typed PHP SDK for adding customer custom domains to SaaS products with DNS, TLS, routing, widget, usage, and signed webhook APIs.",
+    "keywords": [
+        "custom-domains",
+        "saas",
+        "domain-management",
+        "dns",
+        "tls",
+        "ssl",
+        "api-client",
+        "webhooks",
+        "psr-18"
+    ],
+    "homepage": "https://docs.subdomain.to/sdks/php",
+    "support": {
+        "docs": "https://docs.subdomain.to/sdks/php",
+        "issues": "https://github.com/subdomain-to/sdk/issues",
+        "source": "https://github.com/subdomain-to/sdk"
+    },
     "type": "library",
     "license": "MIT",
     "require": {
